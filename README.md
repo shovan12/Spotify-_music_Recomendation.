@@ -1,94 +1,71 @@
 # 🎵 Spotify Music Recommendation
 
-A Python-based music recommendation project built around a large song dataset containing artist names, song titles, links, and text/lyrics data. The notebook explores data preparation and a text-based approach to finding relevant songs from the dataset.
+A machine learning based Spotify-style music recommendation system built with **Python, Pandas, Scikit-learn, TF-IDF, Cosine Similarity, and Streamlit**.
 
-## 📊 Dataset
+## 🚀 Features
 
-The notebook works with a dataset containing **57,650 songs** and these main fields:
+- 🔎 Search songs by song name or artist
+- 🎧 Select a song from the dataset
+- 🤖 Generate similar-song recommendations
+- 📊 Display cosine similarity scores
+- ⚡ Interactive Streamlit web interface
+- 🧠 Lyric-based recommendation using TF-IDF
 
-- `artist` — artist name
-- `song` — song title
-- `link` — song reference/link
-- `text` — song lyrics/text
-
-## ✨ Project Highlights
-
-- Load and inspect a large music dataset
-- Work with artist and song metadata
-- Process text/lyrics data for recommendation use cases
-- Explore relationships between songs using their textual information
-- Build the foundation for a content-based music recommendation system
-
-## 🧠 Machine Learning / Data Science Concepts
+## 🛠️ Technologies
 
 - Python
 - Pandas
-- Data preprocessing
-- Text data processing
-- Recommendation systems
-- Exploratory data analysis
-
-## 🔄 Project Workflow
-
-```text
-Music Dataset
-     ↓
-Data Loading
-     ↓
-Data Inspection & Cleaning
-     ↓
-Text / Lyrics Processing
-     ↓
-Song Representation
-     ↓
-Recommendation Logic
-     ↓
-Recommended Songs
-```
-
-## 📓 Notebook
-
-The complete implementation is available in:
-
-```text
-Spotify_Music_Recommendation.ipynb
-```
-
-## 🚀 Run the Project
-
-You can open the notebook in **Google Colab** or **Jupyter Notebook**.
-
-```bash
-pip install pandas
-```
-
-Then open `Spotify_Music_Recommendation.ipynb` and run the cells in order.
+- Scikit-learn
+- TF-IDF Vectorization
+- Cosine Similarity
+- Streamlit
+- Pickle
 
 ## 📁 Project Structure
 
 ```text
 Spotify-_music_Recomendation./
+│
+├── app.py
+├── songs.pkl
+├── similarity.pkl
+├── tfidf.pkl
+├── requirements.txt
 ├── Spotify_Music_Recommendation.ipynb
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-## 🎯 Learning Outcomes
+## ⚙️ How It Works
 
-This project helped build practical experience with large tabular datasets, text data, Pandas-based preprocessing, and the fundamentals of recommendation-system development.
+1. Song lyrics are processed and cleaned.
+2. TF-IDF converts lyric text into numerical vectors.
+3. Cosine similarity measures similarity between songs.
+4. The most similar songs are selected.
+5. Streamlit provides the interactive user interface.
 
-## 🔮 Future Improvements
+## ▶️ Run Locally
 
-- Add a more advanced content-based recommendation model
-- Improve text preprocessing and feature extraction
-- Add recommendation evaluation metrics
-- Build a Streamlit web interface
-- Integrate the Spotify API for richer song metadata
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
+
+Then open the local Streamlit URL shown in the terminal.
+
+## 📌 Note
+
+The recommendation model uses precomputed model files (`songs.pkl` and `similarity.pkl`). These files must be generated from the same dataset and kept aligned by row order.
 
 ## 👨‍💻 Author
 
-**Shovan Pradhan**  
-CSE (AI & ML) Student | Aspiring AI/ML Engineer
+**Shovan Pradhan**
 
 GitHub: https://github.com/shovan12
-
-⭐ If you find this project useful, consider giving it a star!
